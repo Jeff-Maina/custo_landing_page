@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
+import image from "../../public/header-image.webp";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,15 +43,35 @@ export default function Home() {
           <div>
             <Navbar />
             <div className="xl:pt-20 relative z-10">
-              <div>
-                <p className="xl:text-[77px] text-[50px] tracking-wide font-semibold text-white  xl:leading-[80px]">
+              <div className="overflow-hidden">
+                <motion.p
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{
+                    y: {
+                      duration: 0.7,
+                      delay: 0.7,
+                    },
+                  }}
+                  className="xl:text-[77px] text-[50px] tracking-wide font-semibold text-white  xl:leading-[80px]"
+                >
                   Receive the world
-                </p>
+                </motion.p>
               </div>
-              <div>
-                <p className="xl:text-[77px] text-[50px]  font-semibold text-white xl:leading-[80px] leading-[50px] tracking-wide">
+              <div className="overflow-hidden">
+                <motion.p
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{
+                    y: {
+                      duration: 0.7,
+                      delay: 0.7,
+                    },
+                  }}
+                  className="xl:text-[77px] text-[50px]  font-semibold text-white xl:leading-[80px] leading-[50px] tracking-wide"
+                >
                   at your doorstep
-                </p>
+                </motion.p>
               </div>
 
               <div className=" h-20 xl:mt-10 mt-6 xl:w-[25rem] w-[23rem] flex flex-col justify-evenly overflow-hidden redirect-link cursor-pointer group">
@@ -131,13 +152,15 @@ export default function Home() {
           <div className="min-w-2/4 min-h-2/4  absolute left-2/4 bottom-0 -translate-x-2/4 grid place-items-center">
             <motion.img
               initial={{ scale: 1.2 }}
-              animate={{ scale: 1, y: "62%"}}
+              animate={{ scale: 1, y: "62%" }}
               transition={{
                 scale: {
                   duration: 1.3,
+                  delay: 0.3,
                   ease: [0.25, 0.1, 0.25, 1],
                 },
               }}
+              // src={image}
               src="https://custo.io/cdn/shop/files/custo-hero_592x1234_crop_center.png?v=1669139239"
               alt=""
               className="lg:translate-y-[62%] translate-y-2/4 lg:w-[80vmin]"

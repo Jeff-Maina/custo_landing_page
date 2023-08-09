@@ -2,7 +2,7 @@ const Navbar = () => {
   const navlinks = ["Smart mailBoxes", "How it works", "The App", "About"];
 
   return (
-    <nav className="w-full lg:h-32 h-28 flex items-center text-white xl:text-[27px] text-[20px] justify-between">
+    <nav className="w-full lg:h-32 h-28 relative z-50 flex items-center text-white xl:text-[27px] text-[20px] justify-between">
       <div className="xl:w-1/4 h-full flex items-center ">
         <h1 className="uppercase xl:text-[44px]  text-[30px] font-semibold">
           CUSTO
