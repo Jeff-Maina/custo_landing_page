@@ -20,7 +20,7 @@ export default function Home() {
               ease: [0.58, 0.13, 0, 1.01],
             },
           }}
-          className="absolute z-20 w-screen h-screen bg-white top-0 left-0 grid place-items-center"
+          className="absolute z-[100000] w-screen h-screen bg-white top-0 left-0 grid place-items-center"
         >
           <div className="h-10 overflow-hidden">
             <motion.p
@@ -117,6 +117,7 @@ export default function Home() {
               {Array.from("CUSTO").map((letter, index) => {
                 return (
                   <motion.div
+                    key={index}
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{
