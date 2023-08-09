@@ -113,7 +113,7 @@ export default function Home() {
           </div>
 
           <div className="w-full flex items-end relative z-10 lg:pb-4 pb-8">
-            <div className="flex items-center w-full justify-evenly  lg:h-[24rem] overflow-hidden ">
+            <div className="flex items-center w-full justify-evenly  lg:h-[24rem] h-44">
               {Array.from("CUSTO").map((letter, index) => {
                 return (
                   <motion.div
@@ -126,7 +126,7 @@ export default function Home() {
                         ease: [0.25, 0.1, 0.25, 1],
                       },
                     }}
-                    className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[7rem] leading-[8rem] font-bold"
+                    className="text-white min-[1500px]:text-[24rem] min-[1600px]:text-[28rem]  min-[1200px]:text-[20rem] lg:leading-[30rem] md:text-[14rem] text-[7rem] leading-[8rem] font-bold"
                   >
                     {letter}
                   </motion.div>

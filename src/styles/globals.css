@@ -56,7 +56,7 @@ body {
 
 .underline-one,
 .underline-two {
-    transition: all 600ms ease;
+  transition: all 600ms ease;
 }
 
 .redirect-link > .underlines > .underline-two {
@@ -68,4 +68,27 @@ body {
 }
 .redirect-link:hover > .underlines > .underline-two {
   transform: translate(0%, 0%);
+}
+
+.bar-1,
+.bar-2,
+.bar-3 {
+  transition: all 600ms ease;
+}
+
+#menu-check:checked ~ .hamburger > .bar-1 {
+  transform-origin: left center;
+  rotate: 45deg;
+  transform: translate(0px, -4px);
+}
+
+#menu-check:checked ~ .hamburger > .bar-2 {
+  transform: translate(100%, 0);
+  opacity: 0;
+}
+
+#menu-check:checked ~ .hamburger > .bar-3 {
+  transform-origin: left center;
+  rotate: -45deg;
+  transform: translate(2px, 2px);
 }
