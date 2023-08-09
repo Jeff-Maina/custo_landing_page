@@ -7,23 +7,23 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main className="w-screen">
-      <section className="w-full h-screen bg-[#9ea29f] xl:px-20 md:px-16 px-8 flex-col flex justify-between">
+      <section className="w-full h-screen bg-[#9ea29f] xl:px-20 md:px-16 px-8 flex-col flex justify-between relative overflow-hidden">
         {/* <img src="" alt="" className="absolute w-screen h-screen object-cover top-0 left-0" /> */}
         <div>
           <Navbar />
-          <div className="xl:pt-20">
+          <div className="xl:pt-20 relative z-10">
             <div>
               <p className="xl:text-[77px] text-[50px] tracking-wide font-semibold text-white  xl:leading-[80px]">
                 Receive the world
               </p>
             </div>
-            <div >
+            <div>
               <p className="xl:text-[77px] text-[50px]  font-semibold text-white xl:leading-[80px] leading-[50px] tracking-wide">
                 at your doorstep
               </p>
             </div>
 
-            <div className=" h-20 xl:mt-10 mt-6 xl:w-[30rem] w-[23rem] flex flex-col justify-evenly overflow-hidden redirect-link cursor-pointer group">
+            <div className=" h-20 xl:mt-10 mt-6 xl:w-[25rem] w-[23rem] flex flex-col justify-evenly overflow-hidden redirect-link cursor-pointer group">
               <div className="text-white text-[27px] font-semibold flex items-center justify-between">
                 <div className="flex items-center -translate-x-[40px] gap-2 group-hover:translate-x-0 transition-all ease duration-500">
                   <div>
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full flex items-start justify-between border">
+        <div className="w-full flex items-start justify-between relative z-10">
           <span className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[8rem] leading-[8rem] font-bold">
             C
           </span>
@@ -80,6 +80,14 @@ export default function Home() {
           <span className="text-white lg:text-[15rem] lg:leading-[30rem] text-[3rem] font-normal -translate-y-1/4">
             ®
           </span>
+        </div>
+
+        <div className="min-w-2/4 min-h-2/4  absolute left-2/4 bottom-0 -translate-x-2/4 grid place-items-center">
+          <img
+            src="https://custo.io/cdn/shop/files/custo-hero_592x1234_crop_center.png?v=1669139239"
+            alt=""
+            className="lg:translate-y-[62%] translate-y-2/4 lg:w-[80vmin]"
+          />
         </div>
       </section>
     </main>
