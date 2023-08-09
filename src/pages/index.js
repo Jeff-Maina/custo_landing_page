@@ -1,32 +1,76 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { AnimatePresence, motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="w-screen">
-      <section className="w-full h-screen bg-[#9ea29f] xl:px-20 md:px-16 px-8 flex-col flex justify-between relative overflow-hidden">
-        {/* <img src="" alt="" className="absolute w-screen h-screen object-cover top-0 left-0" /> */}
-        <div>
-          <Navbar />
-          <div className="xl:pt-20 relative z-10">
-            <div>
-              <p className="xl:text-[77px] text-[50px] tracking-wide font-semibold text-white  xl:leading-[80px]">
-                Receive the world
-              </p>
-            </div>
-            <div>
-              <p className="xl:text-[77px] text-[50px]  font-semibold text-white xl:leading-[80px] leading-[50px] tracking-wide">
-                at your doorstep
-              </p>
-            </div>
+    <AnimatePresence>
+      <main className="w-screen">
+        <motion.section
+          initial={{ y: 0 }}
+          animate={{ y: "-100%" }}
+          transition={{
+            y: {
+              duration: 1,
+              delay: 0.3,
+              ease: [0.58, 0.13, 0, 1.01],
+            },
+          }}
+          className="absolute z-20 w-screen h-screen bg-white top-0 left-0 grid place-items-center"
+        >
+          <div className="h-10 overflow-hidden">
+            <motion.p
+              initial={{ y: 0 }}
+              animate={{ y: "-100%" }}
+              transition={{
+                y: {
+                  duration: 0.3,
+                  delay: 0.3,
+                },
+              }}
+              className="text-4xl font-semibold tracking-wider"
+            >
+              CUSTO<span className="font-normal">®</span>
+            </motion.p>
+          </div>
+        </motion.section>
+        <section className="w-full h-screen bg-[#9ea29f] xl:px-20 md:px-16 px-8 flex-col flex justify-between relative overflow-hidden">
+          {/* <img src="" alt="" className="absolute w-screen h-screen object-cover top-0 left-0" /> */}
+          <div>
+            <Navbar />
+            <div className="xl:pt-20 relative z-10">
+              <div>
+                <p className="xl:text-[77px] text-[50px] tracking-wide font-semibold text-white  xl:leading-[80px]">
+                  Receive the world
+                </p>
+              </div>
+              <div>
+                <p className="xl:text-[77px] text-[50px]  font-semibold text-white xl:leading-[80px] leading-[50px] tracking-wide">
+                  at your doorstep
+                </p>
+              </div>
 
-            <div className=" h-20 xl:mt-10 mt-6 xl:w-[25rem] w-[23rem] flex flex-col justify-evenly overflow-hidden redirect-link cursor-pointer group">
-              <div className="text-white text-[27px] font-semibold flex items-center justify-between">
-                <div className="flex items-center -translate-x-[40px] gap-2 group-hover:translate-x-0 transition-all ease duration-500">
-                  <div>
+              <div className=" h-20 xl:mt-10 mt-6 xl:w-[25rem] w-[23rem] flex flex-col justify-evenly overflow-hidden redirect-link cursor-pointer group">
+                <div className="text-white text-[27px] font-semibold flex items-center justify-between">
+                  <div className="flex items-center -translate-x-[40px] gap-2 group-hover:translate-x-0 transition-all ease duration-500">
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        id="arrow"
+                        fill="#fff"
+                      >
+                        <path d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"></path>
+                      </svg>
+                    </div>
+                    <p className="text-[24px]"> Discover our smart mailbox</p>
+                  </div>
+                  <div className="group-hover:translate-x-[40px] transition-all ease duration-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="32"
@@ -38,58 +82,38 @@ export default function Home() {
                       <path d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"></path>
                     </svg>
                   </div>
-                  <p className="text-[24px]"> Discover our smart mailbox</p>
                 </div>
-                <div className="group-hover:translate-x-[40px] transition-all ease duration-500">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    id="arrow"
-                    fill="#fff"
-                  >
-                    <path d="M4 15a1 1 0 0 0 1 1h19.586l-4.292 4.292a1 1 0 0 0 1.414 1.414l6-6a.99.99 0 0 0 .292-.702V15c0-.13-.026-.26-.078-.382a.99.99 0 0 0-.216-.324l-6-6a1 1 0 0 0-1.414 1.414L24.586 14H5a1 1 0 0 0-1 1z"></path>
-                  </svg>
+                <div className="flex items-center underlines relative overflow-hidden">
+                  <div className="w-[30rem] h-[1px] underline-one bg-white"></div>
+                  <div className="w-[30rem] h-[1px] underline-two absolute bg-white"></div>
                 </div>
-              </div>
-              <div className="flex items-center underlines relative overflow-hidden">
-                <div className="w-[30rem] h-[1px] underline-one bg-white"></div>
-                <div className="w-[30rem] h-[1px] underline-two absolute bg-white"></div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="w-full flex items-start justify-between relative z-10">
-          <span className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[8rem] leading-[8rem] font-bold">
-            C
-          </span>
-          <span className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[8rem] leading-[8rem] font-bold">
-            U
-          </span>
-          <span className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[8rem] leading-[8rem] font-bold">
-            S
-          </span>
-          <span className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[8rem] leading-[8rem] font-bold">
-            T
-          </span>
-          <span className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[8rem] leading-[8rem] font-bold">
-            O
-          </span>
-          <span className="text-white lg:text-[15rem] lg:leading-[30rem] text-[3rem] font-normal -translate-y-1/4">
-            ®
-          </span>
-        </div>
+          <div className="w-full flex items-start justify-between relative z-10">
+            {Array.from("CUSTO").map((letter, index) => {
+              return (
+                <span className="text-white xl:text-[28rem] md:text-[15rem] md:leading-[30rem] text-[8rem] leading-[8rem] font-bold">
+                  {letter}
+                </span>
+              );
+            })}
 
-        <div className="min-w-2/4 min-h-2/4  absolute left-2/4 bottom-0 -translate-x-2/4 grid place-items-center">
-          <img
-            src="https://custo.io/cdn/shop/files/custo-hero_592x1234_crop_center.png?v=1669139239"
-            alt=""
-            className="lg:translate-y-[62%] translate-y-2/4 lg:w-[80vmin]"
-          />
-        </div>
-      </section>
-    </main>
+            <span className="text-white lg:text-[15rem] lg:leading-[30rem] text-[3rem] font-normal -translate-y-1/4">
+              ®
+            </span>
+          </div>
+
+          <div className="min-w-2/4 min-h-2/4  absolute left-2/4 bottom-0 -translate-x-2/4 grid place-items-center">
+            <img
+              src="https://custo.io/cdn/shop/files/custo-hero_592x1234_crop_center.png?v=1669139239"
+              alt=""
+              className="lg:translate-y-[62%] translate-y-2/4 lg:w-[80vmin]"
+            />
+          </div>
+        </section>
+      </main>
+    </AnimatePresence>
   );
 }
