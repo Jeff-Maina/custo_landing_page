@@ -67,6 +67,7 @@ const Navbar = () => {
             </div>
           </button>
         </div>
+        {/* y2k */}
         <div
           className={`w-screen  translate-x-full h-screen top-0 left-0 bg-black fixed z-50 ${menuClass} pt-20 p-6 flex flex-col justify-between menu lg:hidden `}
         >
