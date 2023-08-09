@@ -38,7 +38,7 @@ export default function Home() {
             </motion.p>
           </div>
         </motion.section>
-        <section className="w-full h-screen bg-[#9ea29f] xl:px-20 md:px-16 px-6 flex-col flex justify-between relative overflow-hidden">
+        <section className="w-full h-screen bg-[#9ea29f] xl:px-20 lg:px-16 px-6 flex-col flex justify-between relative overflow-hidden">
           {/* <img src="" alt="" className="absolute w-screen h-screen object-cover top-0 left-0" /> */}
           <div>
             <Navbar />

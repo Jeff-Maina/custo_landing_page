@@ -52,7 +52,7 @@ const Navbar = () => {
             }}
             className={`h-12 menu-btn aspect-square rounded-full cursor-full ${
               !isMenuOpen ? "bg-[#b8bbb9]" : "bg-[#444]"
-            } md:hidden relative overflow-hidden cursor-pointer z-[1000] transition-all duration-500`}
+            } lg:hidden relative overflow-hidden cursor-pointer z-[1000] transition-all duration-500`}
           >
             <input
               onClick={handleMenu}
@@ -68,9 +68,9 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className={`w-screen  translate-x-full h-screen top-0 left-0 bg-black fixed z-50 ${menuClass} pt-20 p-6 flex flex-col justify-between menu md:hidden`}
+          className={`w-screen  translate-x-full h-screen top-0 left-0 bg-black fixed z-50 ${menuClass} pt-20 p-6 flex flex-col justify-between menu lg:hidden `}
         >
-          <ul className="pt-10 menu-link-container">
+          <ul className="pt-10 md:pt-20 menu-link-container">
             <li className="text-[3.5rem] font-semibold menu-link relative">
               Home
             </li>

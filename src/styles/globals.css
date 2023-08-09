@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @font-face {
-  font-family: 'nuer regular';
+  font-family: "nuer regular";
   src: url("/fonts/ppneuemontreal-book.otf");
 }
 
@@ -9,7 +9,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'nuer regular', sans-serif;
+  font-family: "nuer regular", sans-serif;
   overflow-x: hidden;
 }
 
@@ -97,6 +97,7 @@ body {
 }
 
 .menu-hidden {
+  transform: translate(100%, 0%);
   animation: menu-closed 700ms ease 1 forwards;
 }
 
